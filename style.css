@@ -1,0 +1,157 @@
+:root {
+    /*Primary*/
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /*Neutral*/
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+    --very-light-gray: hsl(0,0%,95%); /*background, headings, buttons)*/
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Lexend Deca', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Grid Settings*/
+
+#main-id {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "c1 c2 c3";
+    background-color: violet;
+    height: auto;
+    border-radius: 8px;
+    overflow: auto;
+    max-width: 735px;
+    color: var(--transparent-white)
+}
+
+@media (max-width: 700px) {
+    #main-id {
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: 100%;
+        max-width: 710px;
+        grid-template-areas: 
+        "c1"
+        "c2"
+        "c3";
+        margin: 15px;
+        height: 90vh;
+        max-width: 350px;
+    }
+}
+
+img {
+    width: 50px;
+}
+
+@media (max-width: 700px) {
+    img {
+        width: 70px;
+    }
+}
+
+/*Title*/
+
+h2 {
+    color: var(--very-light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2rem;
+}
+
+@media (max-width: 700px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+}
+
+/*Paragraph*/
+
+p {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+    p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+}
+
+/*Sedan Column*/
+
+#grid-sedan {
+    grid-area: c1;
+    justify-content: center;
+    background-color: var(--bright-orange);
+    padding: 38px;
+}
+
+.sed-button {
+    color: var(--bright-orange)
+}
+
+/*Suv Column*/
+
+#grid-suvs {
+    grid-area: c2;
+    background-color: var(--dark-cyan);
+    padding: 38px;
+}
+
+.suv-button {
+    color: var(--dark-cyan)
+}
+
+/*Luxury Column*/
+
+#grid-luxury {
+    grid-area: c3;
+    background-color: var(--very-dark-cyan);
+    padding: 38px;
+}
+
+.lux-button {
+    color: var(--very-dark-cyan)
+}
+
+/*Buttons*/
+
+button {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.8rem;
+    margin-top: 50px;
+    border-radius: 50px;
+    height: 40px;
+    width: 120px;
+    border-style: none;
+    transition: 0.2s;
+}
+
+@media (max-width: 700px) {
+    button {
+        margin-top: 10px;
+        font-size: 16px;
+        width: 160px;
+        height: 50px;
+    }
+}
+
+button:hover {
+    background-color: transparent;
+    border-style: solid;
+    border-color: var(--very-light-gray);
+    color: var(--very-light-gray);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
